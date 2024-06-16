@@ -8,7 +8,7 @@ def load_data(file_path):
     return pickle.load(open(file_path, 'rb'))
 
 # Function to preprocess data for display
-def preprocess_data(popular_df, pt, books):
+def preprocess_data(popular_df):
     book_data = {
         'book_name': list(popular_df['Book-Title'].values),
         'author': list(popular_df['Book-Author'].values),
@@ -44,7 +44,7 @@ def main():
     similarity_scores = load_data('./Data/similarity_scores.pkl')
 
     # Preprocess data
-    book_data = preprocess_data(popular_df, pt, books)
+    book_data = preprocess_data(popular_df)
 
     # Set page configuration
     st.set_page_config(page_title="Book Recommendation", page_icon="📚", layout="wide")
@@ -77,8 +77,6 @@ def main():
             st.image(book_data['image'][i])
             st.write(book_data['book_name'][i])
             st.write(book_data['author'][i])
-            st.write(f'Avg rating: {book_data["rating"][i]}')
-            st.write(f'Total votes: {book_data["votes"][i]}')
-
+            
 if __name__ == "__main__":
     main()
