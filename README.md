@@ -27,6 +27,7 @@ The recommendation system uses the following datasets:
 
 ## Credits
 - Blog: [Recommendation System](https://pub.towardsai.net/step-by-step-approach-to-building-a-recommendation-system-a65be5a54045)
+- Dataset: [Kaggle](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset)
 
 
 
